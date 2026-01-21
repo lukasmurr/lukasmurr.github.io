@@ -1,59 +1,133 @@
-# Portfolio
+# Lukas Murr Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.0.
+Eine moderne Portfolio-Website gebaut mit Angular 21 und Progressive Web App (PWA) Funktionen.
 
-## Development server
+## 🚀 Features
 
-To start a local development server, run:
+- **Angular 21**: Neueste Angular-Version mit standalone components
+- **Signals**: Moderne reaktive Programmierung mit Angular Signals
+- **Control Flow**: Neue @if, @for, @empty Syntax
+- **PWA**: Progressive Web App mit Service Worker
+- **Responsive Design**: Optimiert für alle Bildschirmgrößen
+- **Lazy Loading**: Optimierte Performance durch Code-Splitting
+- **Modern UI**: Dunkles Theme mit Gradient-Effekten
 
-```bash
-ng serve
+## 📦 Technologie-Stack
+
+- Angular 21.1.0
+- TypeScript 5.9
+- SCSS für Styling
+- Angular Service Worker für PWA
+- GitHub Pages für Hosting
+
+## 🏗️ Projektstruktur
+
+```
+src/
+├── app/
+│   ├── components/     # Wiederverwendbare Komponenten
+│   │   ├── header.component.ts
+│   │   ├── footer.component.ts
+│   │   └── project-card.component.ts
+│   ├── pages/         # Seiten-Komponenten
+│   │   ├── home.component.ts
+│   │   ├── webdev.component.ts
+│   │   ├── devops.component.ts
+│   │   └── gaming.component.ts
+│   ├── services/      # Angular Services
+│   │   └── project.service.ts
+│   └── models/        # TypeScript Interfaces
+│       └── project.model.ts
+├── styles.scss        # Globale Styles
+└── index.html        # HTML Entry Point
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🛠️ Entwicklung
 
-## Code scaffolding
+### Voraussetzungen
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Node.js 20.x oder höher
+- npm 10.x oder höher
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Installation
 
 ```bash
-ng generate --help
+npm install
 ```
 
-## Building
-
-To build the project run:
+### Development Server
 
 ```bash
-ng build
+npm start
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Navigiere zu `http://localhost:4200/`. Die App wird automatisch neu geladen, wenn du Änderungen an den Quelldateien vornimmst.
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+### Build
 
 ```bash
-ng test
+npm run build
 ```
 
-## Running end-to-end tests
+Die Build-Artefakte werden im `dist/` Verzeichnis gespeichert.
 
-For end-to-end (e2e) testing, run:
+### Production Build für GitHub Pages
 
 ```bash
-ng e2e
+npm run build:prod
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Dieser Befehl erstellt einen optimierten Production-Build mit dem korrekten base-href für GitHub Pages.
 
-## Additional Resources
+## 🚢 Deployment
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Die Website wird automatisch auf GitHub Pages deployt, wenn Änderungen zum `main` Branch gepusht werden.
+
+Der Deployment-Prozess ist über GitHub Actions automatisiert (siehe `.github/workflows/deploy.yml`).
+
+## 📱 PWA-Features
+
+Die Anwendung ist als Progressive Web App konfiguriert und bietet:
+
+- Offline-Funktionalität durch Service Worker
+- Installierbar auf Desktop und Mobile
+- App-Manifest mit Icons
+- Optimierte Performance und Caching
+
+## 🎨 Anpassung
+
+### Projekte hinzufügen
+
+Bearbeite `src/app/services/project.service.ts` um neue Projekte hinzuzufügen:
+
+```typescript
+{
+  id: 'unique-id',
+  title: 'Projekt Titel',
+  description: 'Projekt Beschreibung',
+  technologies: ['Tech1', 'Tech2'],
+  category: 'webdev' | 'devops' | 'gaming',
+  featured: true,
+  githubUrl: 'https://github.com/...',
+  liveUrl: 'https://...'
+}
+```
+
+### Farben anpassen
+
+Hauptfarben können in `src/styles.scss` angepasst werden.
+
+## 📄 Lizenz
+
+Dieses Projekt ist für persönliche Nutzung.
+
+## 👤 Autor
+
+**Lukas Murr**
+
+- GitHub: [@lukasmurr](https://github.com/lukasmurr)
+- Website: [lukasmurr.github.io](https://lukasmurr.github.io)
+
+---
+
+Built with ❤️ using Angular 21
